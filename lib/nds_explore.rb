@@ -10,6 +10,11 @@ def pretty_print_nds(nds)
 end
 
 def print_first_directors_movie_titles
-  pp Jaws
-  
+  row_index = 0
+  src = []
+  while row_index < directors_database[0][:movies].count do
+    src << directors_database[0][:movies][row_index][:title]
+    row_index += 1
+  end
+  return pp src
 end
